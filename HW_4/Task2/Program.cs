@@ -19,6 +19,6 @@ int multN(int maxNumber)
 }
 
 int numberN = Prompt("Введмте число > ");
-System.Console.WriteLine($"Произведение от 1 до {numberN} равна {multN(numberN)}");
+System.Console.WriteLine($"Произведение от 1 до {numberN} равно {multN(numberN)}");
 
 
