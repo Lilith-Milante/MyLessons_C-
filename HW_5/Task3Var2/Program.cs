@@ -1,4 +1,4 @@
-﻿//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива
+//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива
 
 double[] InitArray(int len) // - функция создания массива
 {
@@ -9,7 +9,6 @@ double[] InitArray(int len) // - функция создания массива
     }
     return arrA;
 }
-double []MyArray = InitArray(5); // - создаём массив
 
 void PrintArray(double[] arrA)  // - функция печати массива
 {
@@ -33,7 +32,6 @@ double FindMaxElem(double[] arrA)
 	}
     return max;
 }
-Console.WriteLine($"Максимальный элемент массива: {FindMaxElem (MyArray)}");
 
 double FindMinElem(double[] arrA)
 {
@@ -47,6 +45,9 @@ double FindMinElem(double[] arrA)
 	}
     return min;
 }
+
+double []MyArray = InitArray(5); // - создаём массив
+Console.WriteLine($"Максимальный элемент массива: {FindMaxElem (MyArray)}");
 Console.WriteLine($"Минимальный элемент массива: {FindMinElem (MyArray)}");
 
 PrintArray(MyArray);
