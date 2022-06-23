@@ -1,30 +1,29 @@
 ﻿//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива
 
-int[] InitArray(int len) // - функция создания массива
+double[] InitArray(int len) // - функция создания массива
 {
-    Random rnd = new Random();
-    int[] arrA = new int[len];
+    double[] arrA = new double[len];
     for (int i = 0; i < len; i++)
     {
-        arrA[i] = rnd.Next(1, 100);
+        arrA[i] = new Random().NextDouble()*1000;
     }
     return arrA;
 }
-int []MyArray = InitArray(5); // - создаём массив
+double []MyArray = InitArray(5); // - создаём массив
 
-void PrintArray(int[] arrA)  // - функция печати массива
+void PrintArray(double[] arrA)  // - функция печати массива
 {
     for (int i = 0; i < arrA.Length; i++)
     {
-        int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        double element = arrA[i];
+        System.Console.Write($"{element:F2}; ");
     }
     System.Console.WriteLine();
 }
 
-int FindMaxElem(int[] arrA)
+double FindMaxElem(double[] arrA)
 {
-  int max = arrA[0];
+  double max = arrA[0];
 	for (int i = 0; i < arrA.Length; i++)
 	{
 		if (arrA[i] > max)
@@ -36,9 +35,9 @@ int FindMaxElem(int[] arrA)
 }
 Console.WriteLine($"Максимальный элемент массива: {FindMaxElem (MyArray)}");
 
-int FindMinElem(int[] arrA)
+double FindMinElem(double[] arrA)
 {
-  int min = arrA[0];
+  double min = arrA[0];
 	for (int i = 0; i < arrA.Length; i++)
 	{
 		if (arrA[i] < min)
@@ -52,6 +51,6 @@ Console.WriteLine($"Минимальный элемент массива: {FindM
 
 PrintArray(MyArray);
 
-int Dif = FindMaxElem(MyArray) - FindMinElem(MyArray);
+double Dif = FindMaxElem(MyArray) - FindMinElem(MyArray);
 
-Console.WriteLine($"Разность максимального и минимального значений: {Dif}");
+Console.WriteLine($"Разность максимального и минимального значений: {Dif:F2}");
