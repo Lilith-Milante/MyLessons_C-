@@ -1,0 +1,35 @@
+int[] InitArray(int len)
+{
+    int[] arrA = new int[len];
+    for (int i = 0; i < len; i++)
+    {
+
+}
+    }
+    return arrA;
+    
+    int Prompt(string message)
+{
+    Console.WriteLine(message);
+    string number = Console.ReadLine();
+    int numberInt = int.Parse(number);
+    return numberInt;
+}
+
+int FindPosElem(int[] arrA)
+{
+    int i = 0;
+    foreach (int element in arrA)
+    {
+        if (element % 2 == 0)
+        {
+            i++;
+        }
+    }
+    return i;
+}
+  }
+}
+int Num1 = Prompt("Введите число: ");
+int []MyArray = InitArray(len);
+Console.WriteLine(FindPosElem(MyArray));
