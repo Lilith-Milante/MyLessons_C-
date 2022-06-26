@@ -15,24 +15,23 @@ void PrintArray(int[] MassInt)
 {
     for (int i = 0; i < MassInt.Length; i++)
     {
-        int element = MassInt[i];
-        Console.Write($"{element}; ");
+        Console.Write($" {MassInt[i]} ");
     }
     Console.WriteLine();
 }
 
 int FindPositiveNum(int[] MassInt)
 {
+    int count = 0;
     for (int i = 0; i < MassInt.Length; i++)
     {
-        int count = 0;
+        
         if (MassInt[i] > 0)
         {
-            count = i;
-            i++;
+            count++;
         }
-        return count;
     }
+    return count;
 } 
 
 PrintArray(MassInt);
