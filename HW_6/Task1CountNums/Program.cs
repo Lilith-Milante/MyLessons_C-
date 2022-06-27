@@ -10,6 +10,8 @@ foreach (var num in numbers)
 }
 
 int[] MassInt = Array.ConvertAll(numbers, int.Parse);
+PrintArray(MassInt);
+Console.WriteLine(FindPositiveNum(MassInt));
 
 void PrintArray(int[] MassInt)
 {
@@ -33,9 +35,6 @@ int FindPositiveNum(int[] MassInt)
     }
     return count;
 } 
-
-PrintArray(MassInt);
-Console.WriteLine(FindPositiveNum(MassInt));
 
 
 
