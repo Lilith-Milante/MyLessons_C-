@@ -1,35 +1,39 @@
 ﻿//Задайте двумерный массив размером m×n, заполненный случайными вещественными числами
 
-Console.Write("Количество строк: ");
-int row = Convert.ToInt32(Console.ReadLine());
-Console.Write("Количество столбцов: ");
-int column = Convert.ToInt32(Console.ReadLine());
+int Prompt(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine());
+}
 
-double[,] array = new double[row, column]; // - создание массива
+void CreateDoubleArray(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().NextDouble() * 20 - 10; // - позволяет получать значения в диапазоне (-10, 10)
+        }
+    }
+}
+
+void PrintArray(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]:F2}" + "\t");
+        }
+        Console.WriteLine();
+    }
+}
+
+int row = Prompt("Количество строк: ");
+int column = Prompt("Количество столбцов: ");
+
+double[,] array = new double[row, column];
 
 CreateDoubleArray(array);
 
 PrintArray(array);
-
-void CreateDoubleArray(double[,] array) // - функция создания массива
-{
-  for (int i = 0; i < row; i++)
-  {
-    for (int j = 0; j < column; j++)
-    {
-      array[i, j] = new Random().NextDouble() * 20 - 10;
-    }
-  }
-}
-
-void PrintArray (double[,] array) // - функция печати массива
-{
-for (int i = 0; i < row; i++)
-  {
-      for (int j = 0; j < column; j++)
-      {
-        Console.Write(array[i, j] + "\t");
-      }
-      Console.WriteLine();
-  }
-}
