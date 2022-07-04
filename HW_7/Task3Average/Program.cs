@@ -50,8 +50,8 @@ double[] FindAverageOfColumns(int[,] array)
         for (int i = 0; i < array.GetLength(0); i++)
         {
             take = +array[i, j];
-            DoubleAverageMass[j] = take / array.GetLength(0);
         }
+            DoubleAverageMass[j] = take / array.GetLength(0);
     }
     return DoubleAverageMass;
 }
