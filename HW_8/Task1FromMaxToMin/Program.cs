@@ -61,5 +61,5 @@ int[,] array = GenerateArray(row, column);
 Console.WriteLine("Исходный массив: ");
 PrintArray(array);
 
-Console.WriteLine("Массив с элементами в порядке убывания: ");
+Console.WriteLine("Массив с элементами строки в порядке убывания: ");
 PrintArray(ToSortMassive(array));

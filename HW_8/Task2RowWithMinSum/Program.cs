@@ -33,18 +33,34 @@ void PrintArray(int[,] array)
     }
 }
 
-double[] FindSumOfRows(int[,] array)
+int[] CalcSumFromRows(int[,] array)
 {
-    double[] DoubleAverageMass = new double[array.GetLength(1)];
-    for (int i = 0; i < array.GetLength(1); i++)
+    int[] sum = new int[array.GetLength(0)];
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        double take = 0;
-        for (int i = 0; i < array.GetLength(0); i++)
+        int result = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            take = +array[i, j];
+            result += array[i, j];
+        }
+        sum[i] = result;
+    }
+    return sum;
+}
+
+int FindSmallestSumFromRows(int[] array)
+{
+    int min = array[0];
+    int take = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
+            take = i;
         }
     }
-    return DoubleAverageMass;
+    return take;
 }
 
 int row = Prompt("Количество строк > ");
@@ -52,4 +68,9 @@ int column = Prompt("Количество столбцов > ");
 
 
 int[,] array = GenerateArray(row, column);
+Console.WriteLine("Исходный массив: ");
 PrintArray(array);
+
+int[] SumFromRows = CalcSumFromRows(array);
+int RowThatWeFind = FindSmallestSumFromRows(SumFromRows);
+Console.WriteLine($"Строка с наименьшей суммой элементов: {RowThatWeFind + 1}"); // + 1 для того, чтобы считалось по порядку, а не по индексу (воизбежание нулей)
