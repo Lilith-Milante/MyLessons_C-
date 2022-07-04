@@ -35,4 +35,4 @@ int CalcSumElemOdd(int[] arrA)
 
 }
 PrintArray(MyArray);
-Console.Write(CalcSumElemOdd (MyArray));
+Console.Write(CalcSumElemOdd(MyArray));

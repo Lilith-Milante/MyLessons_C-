@@ -1,5 +1,4 @@
-﻿//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце
-
+﻿//Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива
 
 int Prompt(string message)
 {
@@ -34,34 +33,33 @@ void PrintArray(int[,] array)
     }
 }
 
-void PrintDoubleArray(double[] array) // - функция печати массива из вещ.чисел
+int[,] ToSortMassive(int[,] array)
 {
-    foreach (double element in array)
-        Console.WriteLine($"{element:F2} ");
-    Console.WriteLine();
-}
-
-double[] FindAverageOfColumns(int[,] array)
-{
-    double[] DoubleAverageMass = new double[array.GetLength(1)];
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-        double take = 0;
-        for (int i = 0; i < array.GetLength(0); i++)
+      for (int k = 0; k < array.GetLength(1) - 1; k++)
+      {
+        if (array[i, k] < array[i, k + 1])
         {
-            take = +array[i, j];
+          int temp = array[i, k + 1];
+          array[i, k + 1] = array[i, k];
+          array[i, k] = temp;
         }
-        DoubleAverageMass[j] = take / array.GetLength(0);
+      }
     }
-    return DoubleAverageMass;
+  }
+  return array;
 }
 
 int row = Prompt("Количество строк > ");
 int column = Prompt("Количество столбцов > ");
 
+
 int[,] array = GenerateArray(row, column);
+Console.WriteLine("Исходный массив: ");
 PrintArray(array);
 
-double[] DoubleAverageMass = FindAverageOfColumns(array);
-Console.WriteLine("Среднее арифметическое элементов в каждом столбце: ");
-PrintDoubleArray(DoubleAverageMass);
+Console.WriteLine("Массив с элементами в порядке убывания: ");
+PrintArray(ToSortMassive(array));
