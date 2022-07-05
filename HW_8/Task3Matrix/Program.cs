@@ -1,4 +1,6 @@
-﻿// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц
+﻿/* Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц
+
+Количество строк во второй матрице должно быть равно количеству строк во второй матрице */
 
 int[,] CreateMatrix(string message) // функция по созданию матриц (вместо Prompt и выводов)
 {
@@ -55,7 +57,7 @@ int[,] CreateResultMassive(int[,] matr1, int[,] matr2)
 int SearchProdFromTwoMatrix(int[,] matr1, int[,] matr2, int rowMatrix1, int columnMatrix2)
 {
     int answer = 0;
-    for (int i = 0; i < matr1.Length; i++)
+    for (int i = 0; i < matr1.GetLength(0); i++)
     {
         answer += matr1[rowMatrix1, i] * matr2[i, columnMatrix2];
     }
