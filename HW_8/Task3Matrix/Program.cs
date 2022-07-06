@@ -72,6 +72,12 @@ PrintArray(matrix1);
 Console.WriteLine("Вторая матрица: ");
 PrintArray(matrix2);
 
+if(matrix1.GetLength(0) != matrix2.GetLength(1))
+{
+    Console.WriteLine("Количество СТОЛБЦОВ в первой матрице не равно количеству СТРОК во второй (!)");
+    Environment.Exit(0);
+}
+
 int[,] matrix3 = CreateResultMassive(matrix1, matrix2);
 Console.WriteLine("Произведение двух матриц: ");
 PrintArray(matrix3);
