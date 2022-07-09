@@ -18,11 +18,10 @@ void PrintArray(int[] arrA)
     for (int i = 0; i < arrA.Length; i++)
     {
         int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        Console.Write($"{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
-PrintArray(MyArray);
 
 int [] RevertElements(int[] arrA)
 {
@@ -32,4 +31,6 @@ int [] RevertElements(int[] arrA)
     }
     return arrA;
 }
+
+PrintArray(MyArray);
 PrintArray (RevertElements(MyArray));

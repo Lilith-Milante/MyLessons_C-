@@ -10,16 +10,18 @@ int Prompt(string message)
 
 void PrintEven(int num1, int num2)
 {
-    while (num2 < num1)
-    if(num2 % 2 == 0)
+    if (num2 < num1) return;
+    
+    if (num2 % 2 == 1)
     {
-        return;
+        num2--;
     }
-    PrintEven(num1, num2 - 1); //от большего отнимаем - 1
+    PrintEven(num1, num2 - 2);
     Console.Write($"{num2} ");
 }
 
-int m = Prompt("Введите M: ");
-int n = Prompt("Введите N: ");
+int m = Prompt("Введите M: "); // num1
+int n = Prompt("Введите N: "); // num2
+Console.WriteLine($"M = {m}; N = {n}");
 
 PrintEven(m, n);

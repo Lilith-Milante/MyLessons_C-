@@ -5,7 +5,6 @@
 8   4   2
 Сумма элементов главной диагонали: 1+9+2 = 12*/
 
-
 int Prompt(string message)
 {
     Console.Write(message);
@@ -32,9 +31,9 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write(array[i, j] + "\t");
+            Console.Write(array[i, j] + "\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 

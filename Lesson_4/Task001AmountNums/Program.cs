@@ -7,7 +7,7 @@ int i = 0;
 
 while (num > 0)
 {
-    num/= 10; // num = num / 10
+    num/= 10;
     i++;
 }
 Console.WriteLine("Количество цифр в числе равно: " + i);

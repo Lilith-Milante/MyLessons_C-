@@ -2,7 +2,7 @@
 
 int number1 = number % 10; - третья цифра числа
 int number2 = number % 100; - первая цифра числа
-int number3 = number / 10; - 
+int number3 = number / 10; - откидываем третью цифрц
 
 int number = new Random().Next( , ); - генератор случайных чисел от сих и до сих
 
@@ -16,6 +16,12 @@ int Prompt(string message) - функция ввода строки
     string number = Console.ReadLine();
     int numInt = int.Parse(number);
     return numInt;
+}
+
+int Prompt(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine());
 }
 
 int Num = Convert.ToInt32(Console.ReadLine()); - конвертация строки с число
@@ -41,4 +47,7 @@ return Random;
 
 int []RandomArray = Fil(8); // - действие функции по выводу массива
 PrintArray(RandomArray);
+
+num/= 10; // num = num / 10
+
 */

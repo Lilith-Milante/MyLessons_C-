@@ -1,4 +1,4 @@
-﻿// Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+﻿// Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве
 
 int[] InitArray(int len)
 {
@@ -17,9 +17,9 @@ void PrintArray(int[] arrA)
     for (int i = 0; i < arrA.Length; i++)
     {
         int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        Console.Write($"{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 PrintArray(MyArray);
 

@@ -26,9 +26,9 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write(array[i, j] + "\t");
+            Console.Write(array[i, j] + "\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
@@ -91,5 +91,6 @@ int max = 10;
 int[,] array = GenerateArray(row, column, min, max);
 PrintArray(array);
 Console.WriteLine();
+
 (int row2, int column2) = FindIndexByValue(array, FindMinElem(array));
 PrintArray(RemoveRowColumn(array, row2, column2));

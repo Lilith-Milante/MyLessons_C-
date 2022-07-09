@@ -1,4 +1,4 @@
-﻿//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+﻿//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве
 
 int[] InitArray(int len)
 {
@@ -10,16 +10,16 @@ int[] InitArray(int len)
     }
     return arrA;
 }
-int []MyArray = InitArray(5);
+int[] MyArray = InitArray(5);
 
 void PrintArray(int[] arrA)
 {
     for (int i = 0; i < arrA.Length; i++)
     {
         int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        Console.Write($"{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
 int FindPositiveElements(int[] arrA)
@@ -35,6 +35,6 @@ int FindPositiveElements(int[] arrA)
     return i;
 }
 
-Console.WriteLine(FindPositiveElements (MyArray));
+Console.WriteLine(FindPositiveElements(MyArray));
 
 PrintArray(MyArray);

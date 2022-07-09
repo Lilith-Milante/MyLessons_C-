@@ -4,7 +4,7 @@ M = 4; N = 8 -> "4, 6, 7, 8" */
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
+    Console.Write(message);
     return int.Parse(Console.ReadLine());
 }
 

@@ -17,18 +17,18 @@ void PrintArray(int[] arrA)
     for (int i = 0; i < arrA.Length; i++)
     {
         int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        Console.Write($"{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 PrintArray(MyArray);
 
-int[] Mult(int [] arrA)
+int[] Mult(int[] arrA)
 {
-    int[] result = new int [arrA.Length / 2];
+    int[] result = new int[arrA.Length / 2];
     for (int i = 0; i < arrA.Length / 2; i++)
     {
-        result [i] = arrA[i] * arrA[arrA.Length - i - 1];
+        result[i] = arrA[i] * arrA[arrA.Length - i - 1];
     }
     return result;
 }

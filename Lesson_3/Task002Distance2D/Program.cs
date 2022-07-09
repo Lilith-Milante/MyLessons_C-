@@ -2,7 +2,7 @@
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
+    Console.Write(message);
     string param = Console.ReadLine();
     return int.Parse(param);
 }

@@ -27,9 +27,9 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write(array[i, j] + "\t");
+            Console.Write(array[i, j] + "\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
@@ -53,7 +53,7 @@ void PrintArray2(int[] arrA)
         int element = arrA[i];
         Console.Write($"{i}-{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
 int row = Prompt("Количество строк > ");

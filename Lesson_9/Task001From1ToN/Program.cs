@@ -6,7 +6,7 @@ N = 6 -> "1, 2, 3, 4, 5, 6" */
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
+    Console.Write(message);
     return int.Parse(Console.ReadLine());
 }
 
@@ -16,7 +16,6 @@ void PrintNatural(int number)
     {
         return;
     }
-
     Console.Write($"{number}v ");
     PrintNatural(number - 1);
     Console.Write($"{number}^ ");

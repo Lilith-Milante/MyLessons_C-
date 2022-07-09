@@ -18,9 +18,9 @@ void PrintArray(int[] array)
 {
     foreach (var e in array)
     {
-        System.Console.Write(e + " ");
+        Console.Write(e + " ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
 int[] ReverseArray(int[] array)
@@ -46,16 +46,16 @@ int[] ReverseCopyArray(int[] array)
 }
 
 int[] myArr = CreateArray(4, 1, 10);
-System.Console.WriteLine("Исходный массив");
+Console.WriteLine("Исходный массив");
 PrintArray(myArr);
 
-System.Console.WriteLine("Реверс копи");
+Console.WriteLine("Реверс копи");
 PrintArray(ReverseCopyArray(myArr));
-System.Console.WriteLine("Исходный массив");
+Console.WriteLine("Исходный массив");
 PrintArray(myArr);
 
-System.Console.WriteLine("Реверс");
+Console.WriteLine("Реверс");
 PrintArray(ReverseArray(myArr));
 
-System.Console.WriteLine("Исходный массив");
+Console.WriteLine("Исходный массив");
 PrintArray(myArr);

@@ -28,9 +28,9 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write(array[i, j] + "\t");
+            Console.Write(array[i, j] + "\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
@@ -64,4 +64,5 @@ PrintArray(array);
 
 double[] DoubleAverageMass = FindAverageOfColumns(array);
 Console.WriteLine("Среднее арифметическое элементов в каждом столбце: ");
+
 PrintDoubleArray(DoubleAverageMass);

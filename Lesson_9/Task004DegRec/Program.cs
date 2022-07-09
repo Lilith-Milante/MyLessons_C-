@@ -4,7 +4,7 @@ A = 2; B = 3 -> 8 */
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
+    Console.Write(message);
     return int.Parse(Console.ReadLine());
 }
 

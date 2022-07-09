@@ -2,7 +2,7 @@
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
+    Console.Write(message);
     string param = Console.ReadLine();
     return int.Parse(param);
 }
@@ -12,7 +12,7 @@ void Result(int N)
     int index = 1;
     while (index < N)
     {
-        System.Console.WriteLine(index*index);
+        Console.WriteLine(index*index);
         index++;
     }
 }

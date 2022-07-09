@@ -35,5 +35,6 @@ int[] CopyArray(int[] array)
 
 int[] newarray = CreateArray(7, 34, 50);
 PrintArray(newarray);
+
 int[] copy = CopyArray(newarray);
 PrintArray(copy);

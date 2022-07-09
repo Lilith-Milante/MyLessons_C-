@@ -15,9 +15,9 @@ void PrintArray(double[] arrA)  // - функция печати массива
     for (int i = 0; i < arrA.Length; i++)
     {
         double element = arrA[i];
-        System.Console.Write($"{element:F2}; ");
+        Console.Write($"{element:F2}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
 double FindMaxElem(double[] arrA)

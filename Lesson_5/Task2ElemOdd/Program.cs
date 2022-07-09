@@ -17,9 +17,9 @@ void PrintArray(int[] arrA) // - функция печати массива
     for (int i = 0; i < arrA.Length; i++)
     {
         int element = arrA[i];
-        System.Console.Write($"{element}; ");
+        Console.Write($"{element}; ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
 int CalcSumElemOdd(int[] arrA)
@@ -34,5 +34,6 @@ int CalcSumElemOdd(int[] arrA)
     return sum;
 
 }
+
 PrintArray(MyArray);
 Console.Write(CalcSumElemOdd(MyArray));
