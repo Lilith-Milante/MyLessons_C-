@@ -49,5 +49,5 @@ int []RandomArray = Fil(8); // - действие функции по вывод
 PrintArray(RandomArray);
 
 num/= 10; // num = num / 10
-
+!= не равно
 */
