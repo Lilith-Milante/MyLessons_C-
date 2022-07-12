@@ -7,14 +7,31 @@ int Prompt(string message)
     return int.Parse(Console.ReadLine());
 }
 
-int numberN = Prompt("Введите N");
+int numberN = Prompt("Введите N: "); // кол-во чисел в последовательности
 
-int[] Sequence = new int [numberN];
-
-void PrintWord(int[] array)
+/*void PrintSequence(int numberN)
 {
-   for (int i = 0; i < array.Length; i++)
+    if (numberN > 1)
+        PrintSequence(numberN - 1);
+
+    for (int i = 0; i < numberN; i++)
+        Console.Write($"{numberN}, ");
+}
+PrintSequence(numberN);*/
+
+void PrintSequence(int numberN)
+{
+    int[] sequenceElements = new int[numberN]; // массив длиной в заданное число
+    for (int i = 0, j = 1, k = j; i < numberN; i++)
     {
-        PrintWord(array, );
+        if (sequenceElements[i] < numberN)
+        {
+            
+        }
+            sequenceElements[i] = j;
+        if ((--k) == 0)
+            k = (++j);
+        Console.Write($"{j} ");
     }
 }
+PrintSequence(numberN);
