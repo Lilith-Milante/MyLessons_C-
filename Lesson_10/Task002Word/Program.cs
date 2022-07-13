@@ -10,7 +10,7 @@ int Prompt(string message)
 
 int numberN = Prompt("Введите n: ");
 
-string[] Alphabet = new string { "а", "и", "с", "в" };
+string[] Alphabet = new string{ "а", "и", "с", "в" };
 
 void PrintWord(string[] array, string pref, int count = 4)
 {
